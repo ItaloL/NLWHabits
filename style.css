@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bg-color: hsla(240, 5%, 4%, 1);
+  --bg-checkbox: hsla(240, 6%, 10%, 1);
+  --bg-checkbox-checked: hsla(258, 90%, 66%, 1);
+}
+
+body {
+  font-size: 1.6rem;
+  background: var(--bg-color);
+  color: white;
+  height: 100vh;
+}
+
+header {
+  padding: 4.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: fixed;
+  width: 100%;
+  background-color: var(--bg-color);
+}
+
+button {
+  padding: 1.6rem 2.4rem;
+  border-radius: 0.8rem;
+  border: 1px solid hsla(258, 90%, 66%, 1);
+  background-color: transparent;
+
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 125%;
+
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+form {
+  padding: 18.2rem 4.8rem 4.8rem;
+  display: flex;
+  width: fit-content;
+}
+
+.habits {
+  margin-top: 5.6rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.habit {
+  width: 6.4rem;
+  height: 6.4rem;
+  font-size: 3.2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.days {
+  display: flex;
+  margin-left: 3.2rem;
+  gap: 4.8rem;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.day div {
+  margin-bottom: 0.8rem;
+
+  font-family: "Roboto Mono";
+  font-size: 2rem;
+  line-height: 125%;
+  color: #a1a1aa;
+
+  text-align: center;
+}
+
+input {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 6.4rem;
+  height: 6.4rem;
+
+  background: var(--bg-checkbox);
+
+  border: 0.2rem solid #27272a;
+  border-radius: 0.8rem;
+}
+
+input:checked {
+  background: var(--bg-checkbox-checked);
+  border: 2px solid #a78bfa;
+}
+
+@media (max-width: 570px) {
+    button div {
+      display: none;
+    }
+  }
